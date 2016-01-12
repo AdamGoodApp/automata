@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$( document ).ready(function() {
+
+  $("#logo").on( "click", function() {
+    $("#logo").addClass('logo-left');
+    setTimeout(function(){
+      $("#controls").addClass('fadein');
+      $("#controls").css('opacity', 1);
+    }, 100);
+  });
+
+});
