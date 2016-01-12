@@ -8,6 +8,15 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :home
 
+  match 'claw-open' => 'home#claw_open', :via => :get, :defaults => { :format => :json }
+  match 'claw-close' => 'home#claw_close', :via => :get, :defaults => { :format => :json }
+
+  match 'claw-up' => 'home#claw_up', :via => :get, :defaults => { :format => :json }
+  match 'claw-down' => 'home#claw_down', :via => :get, :defaults => { :format => :json }
+
+  match 'base-left' => 'home#base_left', :via => :get, :defaults => { :format => :json }
+  match 'base-right' => 'home#base_right', :via => :get, :defaults => { :format => :json }
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
